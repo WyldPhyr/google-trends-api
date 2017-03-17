@@ -11,12 +11,24 @@ var util = require('util');
 // })
 // .catch((err) => {
 //   console.log('got the error', err);
-// })
+//   console.log('error message', err.message);
+//   console.log('request body',  err.requestBody);
+// });
 
 // googleTrends.interestOverTime({keyword: 'Valentines Day', startTime: new Date(Date.now() - (4 * 60 * 60 * 1000))}, function(err, results) {
 //   if (err) console.log('oh no error!', err);
 //   else console.log(results);
 // });
+
+
+/******* Interest over time - Comparing multiple keywords *********/
+// googleTrends.interestOverTime({keyword: ['Valentines Day', 'Christmas Day']})
+// .then((res) => {
+//   console.log('this is res', res);
+// })
+// .catch((err) => {
+//   console.log('got the error', err);
+// })
 
 
 /******************** Interest by region **************************/
